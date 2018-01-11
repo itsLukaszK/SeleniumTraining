@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="guru99_SeleniumECommerceLiveProject" />
+        <module name="Guru99_eCommerceSeleniumLiveProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="guru99_SeleniumECommerceLiveProject" target="1.5" />
+      <module name="Guru99_eCommerceSeleniumLiveProject" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

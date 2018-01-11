@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/guru99_SeleniumECommerceLiveProject.iml" filepath="$PROJECT_DIR$/guru99_SeleniumECommerceLiveProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guru99_eCommerceSeleniumLiveProject.iml" filepath="$PROJECT_DIR$/Guru99_eCommerceSeleniumLiveProject.iml" />
     </modules>
   </component>
 </project>
