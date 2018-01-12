@@ -5,9 +5,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
-public class TC_01 {
+public class TC_02 {
     WebDriver driver = new FirefoxDriver();
     HomePage homePage = new HomePage(driver);
     Mobile mobile = new Mobile(driver);
@@ -15,15 +14,16 @@ public class TC_01 {
     @BeforeTest
     public void beforeTest() {
         homePage.goToHomePage();
+        assertEquals(driver.getTitle(), "Home page");
     }
 
     @Test
-    public void verifyItemsInMobileListPageCanBeSortedByName() {
-        assertEquals(driver.getTitle(), "Home page");
+    public void verifyThatCostsOfProductInListPageAndDetailsPageAreEqual() {
         homePage.clickMobileButton();
         assertEquals(driver.getTitle(), "Mobile");
-        mobile.selectSortByValue("Name");
-        assertTrue(mobile.areProductsSortedByName());
+        String sonyXperiaPrice_Mobile = mobile.getProductPrice("Sony Xperia");
+        mobile.goToProductPage("Sony Xperia");
+        //TODO getProductPrice (Product)
     }
 
     @AfterTest
