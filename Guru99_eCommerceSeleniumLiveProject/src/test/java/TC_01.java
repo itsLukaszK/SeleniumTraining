@@ -4,6 +4,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -14,6 +16,7 @@ public class TC_01 {
 
     @BeforeTest
     public void beforeTest() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         homePage.goToHomePage();
     }
 

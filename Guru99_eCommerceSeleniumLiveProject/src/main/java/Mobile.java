@@ -52,6 +52,13 @@ public class Mobile {
         String xpath = "//h2/a[text()='" + product + "']";
         WebElement productButton = driver.findElement(By.xpath(xpath));
         productButton.click();
-        assertEquals(driver.getTitle(), product);
+        assertEquals(driver.getTitle(), product + " - Mobile");
+    }
+
+    public void addProductToCart(String product) {
+        String xpath = "//h2/a[text()='" + product + "']//following::button";
+        WebElement addProductToCartButton = driver.findElement(By.xpath(xpath));
+        addProductToCartButton.click();
+        assertEquals(driver.getTitle(), "Shopping Cart");
     }
 }
