@@ -3,6 +3,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import pages.HomePage;
+import pages.Mobile;
 
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;

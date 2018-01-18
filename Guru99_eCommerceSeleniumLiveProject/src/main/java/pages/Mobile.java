@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -61,4 +63,6 @@ public class Mobile {
         addProductToCartButton.click();
         assertEquals(driver.getTitle(), "Shopping Cart");
     }
+
+    public void addMobileToCompare(String mobile){}
 }
