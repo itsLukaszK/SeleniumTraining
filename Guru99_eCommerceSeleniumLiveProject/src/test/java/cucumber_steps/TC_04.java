@@ -1,9 +1,12 @@
 package cucumber_steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import pages.HomePage;
@@ -40,9 +43,27 @@ public class TC_04 {
         }
     }
 
-    @And("^Add '(.*)' to compare$")
+    @Given("^Add '(.*)' to compare$")
     public void addMobileToCompare(String mobileName) {
         mobile.addMobileToCompare(mobileName);
     }
 
+
+    @When("^Click '(.*)' Mobile button$")
+    public void clickP0MobileButton(String p0) {
+        switch (p0) {
+            case "Compare":
+                mobile.clickCompareButton();
+                break;
+            default:
+                assertTrue(false, "Wrong button");
+                break;
+        }
+    }
+
+    @Then("^'Compare Products' popup window containing the selected products is opened$")
+    public void compareProductsPopupWindowContainingTheSelectedProductsIsOpened() throws Throwable {
+        // TODO Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }

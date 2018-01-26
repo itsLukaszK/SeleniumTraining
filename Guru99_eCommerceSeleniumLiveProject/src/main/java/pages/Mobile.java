@@ -28,6 +28,12 @@ public class Mobile {
     @FindAll(@FindBy(xpath = "//h2/a"))
     List<WebElement> products;
 
+    @FindBy(css = "li.success-msg span")
+    WebElement addedToCompareMessage;
+
+    @FindBy(css = "button.button[title='Compare']")
+    WebElement compareButton;
+
     public void selectSortByValue(String text) {
         Select sortBy = new Select(sortBySelect);
         sortBy.selectByVisibleText(text);
@@ -64,5 +70,14 @@ public class Mobile {
         assertEquals(driver.getTitle(), "Shopping Cart");
     }
 
-    public void addMobileToCompare(String mobile){}
+    public void addMobileToCompare(String mobile) {
+        String xpath = "//a[text()='" + mobile + "']//following::a[text()='Add to Compare']";
+        WebElement addMobileToCompareButton = driver.findElement(By.xpath(xpath));
+        addMobileToCompareButton.click();
+        assertEquals(addedToCompareMessage.getText(), "The product " + mobile + " has been added to comparison list.");
+    }
+
+    public void clickCompareButton(){
+        compareButton.click();
+    }
 }
