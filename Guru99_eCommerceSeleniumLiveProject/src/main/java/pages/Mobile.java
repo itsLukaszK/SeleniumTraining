@@ -77,7 +77,7 @@ public class Mobile {
         assertEquals(addedToCompareMessage.getText(), "The product " + mobile + " has been added to comparison list.");
     }
 
-    public void clickCompareButton(){
+    public void clickCompareButton() {
         compareButton.click();
     }
 }
