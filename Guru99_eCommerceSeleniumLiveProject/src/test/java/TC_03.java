@@ -25,7 +25,7 @@ public class TC_03 {
 
     @Test
     public void verifyThatYouCannotAddMoreProductsInCartThanTheProductsAvailableInStore() {
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         homePage.clickMobileButton();
         assertEquals(driver.getTitle(), "Mobile");
         mobile.addProductToCart("Sony Xperia");

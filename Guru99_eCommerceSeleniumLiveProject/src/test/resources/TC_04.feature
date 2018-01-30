@@ -6,4 +6,4 @@ Feature: TC_04
     And Add 'Sony Xperia' to compare
     And Add 'IPhone' to compare
     When Click 'Compare' Mobile button
-    Then 'Compare Products' popup window containing the selected products: 'Sony Xperia' and 'IPhone' is opened
+    Then 'Compare Products' popup window containing the selected products: 'Sony Xperia' and 'IPhone' is opened and closed
