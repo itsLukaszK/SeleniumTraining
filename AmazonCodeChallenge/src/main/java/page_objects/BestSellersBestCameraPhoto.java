@@ -31,7 +31,9 @@ public class BestSellersBestCameraPhoto {
 
     // Methods
 
-    public void clickDigitalCamerasLink() {
+    //TODO
+    public BestSellersBestDigitalCameras clickDigitalCamerasLink() {
         digitalCamerasLink.click();
+        return new BestSellersBestDigitalCameras(driver);
     }
 }
