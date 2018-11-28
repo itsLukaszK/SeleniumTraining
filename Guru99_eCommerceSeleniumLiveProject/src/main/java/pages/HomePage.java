@@ -22,7 +22,25 @@ public class HomePage {
         driver.get(HOME_PAGE);
     }
 
-    public void clickMobileButton(){
+    public void clickMobileButton() {
         mobileButton.click();
+    }
+
+    @FindBy(css = ".skip-link.skip-account[data-target-element='#header-account']")
+    WebElement accountButton;
+
+    public enum HomePageButtons {
+        MOBILE,
+        ACCOUNT
+    }
+
+    public void clickButton(HomePageButtons button) {
+        switch (button) {
+            case MOBILE:
+                mobileButton.click();
+                break;
+            case ACCOUNT:
+                accountButton.click();
+        }
     }
 }

@@ -36,16 +36,10 @@ public class TC_04 {
         driver.quit();
     }
 
+
     @Given("^Click '(.*)' HomePage button$")
-    public void clickP0HomePageButton(String p0) {
-        switch (p0) {
-            case "mobileButton":
-                homePage.clickMobileButton();
-                break;
-            default:
-                assertTrue(false, "Wrong button");
-                break;
-        }
+    public void clickP0HomePageButton(HomePage.HomePageButtons p0) {
+        homePage.clickButton(p0);
     }
 
     @Given("^Add '(.*)' to compare$")
